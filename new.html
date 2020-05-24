@@ -1,17 +1,51 @@
-﻿<html>
-<head><style>body{color:lightblue;background:url("trololo2.png");}</style></head>
+<html>
+<head>
+<style>
+#col1{width:50px;height:50px;border-radius:50%;background:red;border:1px solid white opacity:0%;outline:none;}
+#col2{width:50px;height:50px;border-radius:50%;background:blue;border:1px solid white opacity:0%;outline:none;}
+#img1{width:50px;height:50px;border-radius:50%;background:url(https://wallpaperaccess.com/full/2005304.jpg); border:1px solid white opacity:0%;outline:none;background-size:cover;}
+#img2{width:50px;height:50px;border-radius:50%;background:url(http://p.favim.com/orig/2018/08/18/nebula-wallpaper-rosette-Favim.com-6147962.png); border:1px solid white opacity:0%;outline:none;background-size:cover;}
+#knopka{border-radius:10px;border:1px solid white opacity:0%;outline:none;}
+body{color:1BFF00;}
+.style1{font-family:Comic Sans MS;font-size:50px;}
+.style2{color:red;}
+
+</style>
+<script>
+function bg(color) {
+document.body.style.background=color;
+document.body.style.backgroundSize='cover';
+}
+function change(block,text) {
+document.getElementById(block).textContent=text;}
+
+function style1(block,clas) {
+document.getElementById(block).classList.toggle(clas);}
+
+function style2(block,clas) {
+document.getElementById(block).classList.toggle(clas);}
+
+</script>
+
+</head>
 <body>
+<header>
+<input type="button" id="col1" onclick="bg('red')">
+<input type="button" id="col2" onclick="bg('blue')">
+
+<input type="button" id="img1" onclick="bg('url(https://wallpaperaccess.com/full/2005304.jpg)')">
+<input type="button" id="img2" onclick="bg('url(http://p.favim.com/orig/2018/08/18/nebula-wallpaper-rosette-Favim.com-6147962.png)')">
 
 
-
-
-
-
-C:\Users\stud01\Desktop\Ростисллав Кухтяк\new99999999999999999999999999999999999999999999999999999999999999999.html-Notepad++
-
-
-
-
+</header>
+<main id="block">
+<h1 align="center" id="zag">TEST</h1>
+<p id="text">Вчимо JavaScript</p>
+</main>
+<input type="button" onclick="change('text','Hello World')" value="Змінити текст" id="knopka">
+<input type="button" onclick="change('zag','TI CHEBUREK')" value="Змінити текст" id="zag">
+<input type="button" onclick="style1('block','style1')" value="Змінити стиль">
+<input type="button" onclick="style2('zag','style2')" value="Змінити стиль TEST">
 
 
 
