@@ -17,8 +17,7 @@
             }
 
             function changeStyle2Text(id, style, style2, id2, text){
-                changeStyle(id, style);
-                changeStyle(id, style2);
+                changeStyleAndText(id, style, id2, text)
                 changeText(id2, text);
             }
         </script>
@@ -28,6 +27,7 @@
                 color:red};
 
             .shryft{
+                font-style: italic;
                 font-family:comic sans ms};
         </style>
     </head>
