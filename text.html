@@ -10,25 +10,16 @@
                 let element = document.getElementById(id);
                 element.classList.add(style);
             }
-
-            function changeStyleAndText(id, style, id2, text){
-                changeStyle(id, style);
-                changeText(id2, text);
-            }
-
-            function changeStyle2Text(id, style, style2, id2, text){
-                changeStyleAndText(id, style, id2, text)
-                changeText(id2, text);
-            }
         </script>
 
         <style>
             .kolir{
-                color:red};
+                color:red;
+            }
 
             .shryft{
-                font-size: larger;
-                font-family:comic sans ms};
+                font-family:comic sans ms;
+            }
         </style>
     </head>
 
@@ -43,11 +34,11 @@
         
         <input type = "button" value = "Змінити шрифт" onclick = "changeStyle('zagolovok', 'shryft')">
 
-        <input type = "button" value = "Змінити шрифт і текст" onclick = "changeStyleAndText('zagolovok', 'shryft', 'greetings', 'Добрий день, друзі')">
+        <input type = "button" value = "Змінити шрифт і текст" onclick = "changeStyle('zagolovok', 'shryft'); changeText('greetings', 'Добрий день, друзі')">
 
-        <input type = "button" value = "Змінити колір і текст" onclick = "changeStyleAndText('zagolovok', 'kolir', 'greetings', 'Добрий день, друзі')">
+        <input type = "button" value = "Змінити колір і текст" onclick = "changeStyle('zagolovok', 'kolir'); changeText('greetings', 'Добрий день, друзі')">
 
-        <input type = "button" value = "Змінити колір, шрифт і текст" onclick = "changeStyle2Text('zagolovok', 'kolir', 'shryft', 'greetings', 'Добрий день, друзі')">
+        <input type = "button" value = "Змінити колір і шрифт" onclick = "changeStyle('zagolovok', 'kolir'); changeStyle('zagolovok', 'shryft')">
 
     </body>
 </html>
