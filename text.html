@@ -4,9 +4,6 @@
             function changeText(id, text){
                 let element = document.getElementById(id);
                     element.textContent = text;
-                /*let element = document.getElementById(id2);
-                    element.textContent=text2;
-                */
             }
 
             function changeStyle(id,style){
@@ -32,6 +29,7 @@
         
         <input type = "button" value = "Змінити шрифт" onclick = "changeStyle('zagolovok', 'shryft')">
         
-    <input type = "button" value = "Змінити текст і шрифт" onclick = "{changeStyle('zagolovok','shryft'); changeText('geetings','kolir')}">
+        <input type = "button" value = "Змінити текст і шрифт" onclick = "{changeStyle('zagolovok','shryft'), changeText('geetings','kolir')}">
+
     </body>
 </html>
