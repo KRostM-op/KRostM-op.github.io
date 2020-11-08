@@ -3,7 +3,7 @@
         <script>
             function changeText(id, text){
                 let element = document.getElementById(id);
-                    element.textContent == text;
+                    element.textContent = text;
                 /*let element = document.getElementById(id2);
                     element.textContent=text2;
                 */
@@ -26,11 +26,11 @@
         
         <p id="greetings">Good afternoon, friends</p>
         
-        <input type = "button" value = "Український текст" onclick = "changeText('greetings','Добрий день, друзі')">
+        <input type = "button" value = "Український текст" onclick = "changeText('greetings', 'Добрий день, друзі')">
         
-        <input type = "button" value = "Змінити колір" onclick = "changeStyle('zagolovok','kolir')">
+        <input type = "button" value = "Змінити колір" onclick = "changeStyle('zagolovok', 'kolir')">
         
-        <input type = "button" value = "Змінити шрифт" onclick = "changeStyle('zagolovok','shryft')">
+        <input type = "button" value = "Змінити шрифт" onclick = "changeStyle('zagolovok', 'shryft')">
         
     <input type = "button" value = "Змінити текст і шрифт" onclick = "{changeText('geetings','kolir'); changeStyle('zagolovok','shryft')}">
     </body>
