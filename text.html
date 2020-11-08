@@ -11,10 +11,8 @@
                 element.classList.add(style);
 
             function changeStyleAndText(id, style, id2, text){
-                let element = document.getElementById(id);
-                element.classList.add(style);
-                let element = document.getElementById(id2);
-                element.textContent = text;
+                changeStyle(id, style);
+                changeText(id2, text);
             }
         </script>
 
