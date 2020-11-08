@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<Script>
+
+    function LAL(newText){
+        let element=document.getElementById("text");
+        switch(element.textContent) {
+            case 'Привіт':
+                element.textContent=newText;
+                break;
+            case 'Hello':
+                element.textContent=newText;  
+                break;
+             default:
+                alert(element);
+                break;
+         }
+         
+    }
+
+</Script>
+
+<h1 align="center" id="text">Hello</h1>
+
+<input type="button" value="EN" onclick="LAL('Hello')"> 
+<input type="button" value="UA" onclick="LAL('Привіт')"> 
+</body>
+</html>
