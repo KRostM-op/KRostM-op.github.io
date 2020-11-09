@@ -2,6 +2,7 @@
     <head>
         <script>
             var texts = 'Добрий день, друзі';
+            
             function changeText(id, text){
                 let element = document.getElementById(id);
                 element.textContent = text;
@@ -17,7 +18,7 @@
                 }
             }
 
-            function changeAll(id, styleKolir, styleShryft, idText, text){
+            function changeAll1(id, styleKolir, styleShryft, idText, text){
                 let element1 = document.getElementById(id);
                 let element2 = document.getElementById(idText);
                 if (styleKolir) {
@@ -27,6 +28,16 @@
                     element1.classList.add(styleShryft);
                 }                
                 element2.textContent = text;
+            }            
+            
+            function changeAll2(id, styleKolir, styleShryft, idText, text){
+                if (styleKolir) {
+                    changeStyle(id, styleKolir);
+                }                
+                if (styleShryft) {
+                    changeStyle(id, styleShryft);
+                }                
+                changeText(idText, text);
             }
         </script>
 
@@ -60,7 +71,9 @@
 
         <input type = "button" value = "Змінити все #1" onclick = "changeStyle('zagolovok', 'kolir', 'shryft'); changeText('greetings', texts)">
 
-        <input type = "button" value = "Змінити все #2" onclick = "changeAll('zagolovok', 'kolir', 'shryft', 'greetings', texts)">
+        <input type = "button" value = "Змінити все #2" onclick = "changeAll1('zagolovok', 'kolir', 'shryft', 'greetings', texts)">
+
+        <input type = "button" value = "Змінити все #3" onclick = "changeAll2('zagolovok', 'kolir', 'shryft', 'greetings', texts)">
 
     </body>
 </html>
