@@ -1,23 +1,17 @@
 <html>
     <head>
         <script>
-            function changeText(id, text){
+            function changeText(id, text, id2, text2){
                 let element = document.getElementById(id);
                 element.textContent = text;
             }
 
-            function changeStyle(id, style){
+            function changeStyle(id, style, id2, style2){
                 let element = document.getElementById(id);
                 element.classList.add(style);
-            }
-
-            function changes(id, style, id2, text){
-                let element1 = document.getElementById(id);
                 let element2 = document.getElementById(id2);
-                element1.classList.add(style);
-                element2.textContent = text;
+                element2.classList.add(style2);
             }
-
         </script>
 
         <style>
@@ -41,19 +35,13 @@
         
         <p id="greetings">Good afternoon, friends</p>
         
-        <input type = "button" value = "Український текст" onclick = "changeText('greetings', 'Добрий день, друзі')">
+        <input type = "button" value = "Український текст" onclick = "changeText('greetings', 'Добрий день, друзі', '', '')">
         
-        <input type = "button" value = "Змінити колір" onclick = "changeStyle('zagolovok', 'kolir')">
+        <input type = "button" value = "Змінити колір" onclick = "changeStyle('zagolovok', 'kolir', '', '')">
         
-        <input type = "button" value = "Змінити шрифт" onclick = "changeStyle('zagolovok', 'kolir_shryft', 'Добрий день, друзі')">
+        <input type = "button" value = "Змінити шрифт" onclick = "changeStyle('zagolovok', 'kolir_shryft', '', '')">
 
-        <input type = "button" value = "Змінити шрифт і текст" onclick = "changeStyle('zagolovok', 'shryft'); changeText('greetings', 'Добрий день, друзі')">
-
-        <input type = "button" value = "Змінити колір і текст" onclick = "changeStyle('zagolovok', 'kolir'); changeText('greetings', 'Добрий день, друзі')">
-
-        <input type = "button" value = "Змінити колір і шрифт" onclick = "changeStyle('zagolovok', 'kolir'); changeStyle('zagolovok', 'shryft')">
-
-        <input type = "button" value = "Змінити все" onclick = "changes('zagolovok', 'kolir_shryft', 'greetings', 'Добрий день, друзі')">
+        <input type = "button" value = "Змінити шрифт і текст" onclick = "changeStyle('zagolovok', 'kolir_Shryft', 'greetings', 'kolir_shryft')">
 
     </body>
 </html>
