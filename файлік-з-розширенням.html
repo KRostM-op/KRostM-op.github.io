@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <style>
+img{width:100px;
+    height:100px;}
+        </style>
+    </head>
+    <script>
+            function login(){
+                let login=prompt("Введіть логін");
+                for(let i=1;i<=5;i++){
+                document.getElementById("auth").innerHTML+="<img src='"+i+".jpeg'>";
+                }
+            }
+    </script>
+<body>
+    <div id="auth">
+        <input type="submit" value="Login" onclick="login()">
+    </div>
+</body>
+</html>

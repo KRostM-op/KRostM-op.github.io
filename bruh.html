@@ -1,0 +1,84 @@
+<html>
+<head>
+<style>
+td{border:2px solid black;}
+table{width:400px;height:400px;border:2px solid black;}
+.X{background:url("X.png");background-size:cover;}
+.O{background:url("O.png");background-size:cover;}
+</style>
+
+
+
+<script>
+    function reset(){
+        location.reload();}
+
+
+
+
+        let role="X"
+        let field=["null","null","null","null","null","null","null","null","null"]
+    function move(id){
+        let elem=document.getElementById("cell"+id);
+      
+        
+        if(role=="O" && field[id]=="none"){
+                    elem.classList.add("O");
+                    field[id]="O";
+                    console.log(field);
+                        role="X";
+        }
+    
+        
+    else if(role=="X" && field[id]=="none"){
+        elem.classList.add("X");
+        field[id]="X";
+
+
+        console.log(field);
+        role="O"
+    }
+    let check=checkWin()
+if(check==true){alert("кінець гри");
+location.reload();}
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+<h1 align="center">Tic Tac Toe</h1>
+
+<table align="center">
+<tr>
+    <td id="cell0" onclick="move(0)"></td>
+    <td id="cell1" onclick="move(1)"></td>
+    <td id="cell2" onclick="move(2)"></td>
+</tr>
+<tr>
+    <td id="cell3" onclick="move(3)"></td>
+    <td id="cell4" onclick="move(4)"></td>
+    <td id="cell5" onclick="move(5)"></td>
+</tr>
+<tr>
+    <td id="cell6"onclick="move(6)"></td>
+    <td id="cell7"onclick="move(7)"d></td>
+    <td id="cell8"onclick="move(8)"></td>
+</tr>
+
+
+<input type="button" value="reset" onclick="reset()">
+
+
+</table>
+</body>
+<html>
