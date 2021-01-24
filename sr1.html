@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <Style>
+.gray{background-color:gray;}
+table,th,td{border:1px solid black;border-spacing:0px;}
+#row{background:aquamarine;}
+    </Style>
+</head>
+
+<body>
+  <h1 id="text"></h1>  
+
+    <table id="list">
+        <tr>
+            <th id="row">№</th>
+            <th id="row">Ім'я Прізвище</th>
+            <th id="row">Відправити листа</th>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+</body>
+<script>
+    let count=0;
+  let name=prompt("Ввведіть ім'я")
+    let gray="";
+    let number=0;
+    let checked="";
+    const users = [
+        "Андрусишин Олег",
+        "Балицький Олексій",
+        "Барановський Ігор",
+        "Бей Тетяна",
+        "Білас Всеволод",
+        "Білоус Андрій",
+        "Бордун Галина",
+        "Буба Євген",
+        "Вантух Володимир",
+        "Васьків Роман",
+        "Вервега Тарас",
+        "Візняк Юрій",
+        "Гагалюк Богдан",
+        "Ганущин Олександр",
+        "Гичка Михайло",
+        "Гірняк Володимир",
+        "Голуб Юрій",
+        "Грабінський Ігор",
+        "Грицик Ольга",
+        "Гудима Юрій",
+        "Дворянин Парасковія",
+        "Дейнека Анатолій",
+        "Демчина Роман",
+        "Дзюдзь Михайло"
+    ];
+
+    for (let i = 0; i < users.length; i++) {number = i + 1;
+        if(number%2==0){
+        gray="gray";
+    }
+    else{
+    gray=''
+}
+if(users[i].includes(name)){
+    checked="checked"
+}
+else{checked=""}
+
+
+
+
+
+        let elem=document.getElementById("list").innerHTML+="<tr><td class="+gray+">"+number+"</td><td class="+gray+">"+users[i]+"</td><td class="+gray+"><input type='checkbox'"+checked+">"
+
+if(users[i].includes(name))
+    {count++
+
+
+
+}}
+document.getElementById("text").innerHTML="З ім'ям " +name +" є " +count +" людей"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
